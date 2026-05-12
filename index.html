@@ -12,6 +12,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
   <style>
 
     *{
@@ -34,7 +37,7 @@
     header{
       width:100%;
       padding:22px 7%;
-      background:rgba(255,255,255,0.9);
+      background:rgba(255,255,255,0.92);
 
       backdrop-filter:blur(10px);
 
@@ -70,7 +73,6 @@
       color:#4b3f34;
       font-size:15px;
       transition:0.3s;
-      position:relative;
     }
 
     nav a:hover{
@@ -90,7 +92,7 @@
       padding:140px 20px 80px;
 
       background:
-      linear-gradient(rgba(248,244,238,0.75),rgba(248,244,238,0.85)),
+      linear-gradient(rgba(248,244,238,0.82),rgba(248,244,238,0.88)),
       url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1600&auto=format&fit=crop');
 
       background-size:cover;
@@ -122,6 +124,13 @@
       margin-bottom:35px;
     }
 
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
     .hero button{
       padding:16px 40px;
       border:none;
@@ -142,6 +151,12 @@
       transform:translateY(-4px);
       background:#a88a69;
       box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .outline-btn{
+      background:white !important;
+      color:#8e7355 !important;
+      border:1px solid #d9c6b0 !important;
     }
 
     .section-title{
@@ -248,32 +263,6 @@
       background:#a88a69;
     }
 
-    .about{
-      width:100%;
-      padding:120px 20px;
-
-      background:white;
-
-      text-align:center;
-    }
-
-    .about h2{
-      font-size:56px;
-      font-family:'Cormorant Garamond',serif;
-      margin-bottom:20px;
-      color:#2f241d;
-    }
-
-    .about p{
-      max-width:800px;
-      margin:auto;
-
-      font-size:17px;
-      line-height:2;
-
-      color:#6f6255;
-    }
-
     .features{
       width:100%;
       max-width:1200px;
@@ -303,6 +292,12 @@
       box-shadow:0 8px 25px rgba(0,0,0,0.04);
     }
 
+    .feature-box i{
+      font-size:34px;
+      margin-bottom:18px;
+      color:#b89b7a;
+    }
+
     .feature-box h3{
       margin-bottom:15px;
       color:#2f241d;
@@ -313,6 +308,119 @@
       color:#7b6c5e;
       font-size:15px;
       line-height:1.8;
+    }
+
+    .about{
+      width:100%;
+      padding:120px 20px;
+
+      background:white;
+
+      text-align:center;
+    }
+
+    .about h2{
+      font-size:56px;
+      font-family:'Cormorant Garamond',serif;
+      margin-bottom:20px;
+      color:#2f241d;
+    }
+
+    .about p{
+      max-width:900px;
+      margin:auto;
+
+      font-size:17px;
+      line-height:2;
+
+      color:#6f6255;
+    }
+
+    .stats{
+      width:100%;
+      max-width:1100px;
+
+      margin:70px auto 0;
+
+      display:grid;
+
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+      gap:20px;
+    }
+
+    .stat-box{
+      background:#f8f4ee;
+      padding:30px;
+      border-radius:20px;
+    }
+
+    .stat-box h3{
+      font-size:34px;
+      color:#b89b7a;
+      margin-bottom:10px;
+    }
+
+    .stat-box p{
+      color:#7b6c5e;
+      font-size:15px;
+    }
+
+    .contact{
+      padding:110px 20px;
+      text-align:center;
+    }
+
+    .contact h2{
+      font-size:54px;
+      font-family:'Cormorant Garamond',serif;
+      margin-bottom:18px;
+      color:#2f241d;
+    }
+
+    .contact p{
+      color:#7b6c5e;
+      margin-bottom:40px;
+      font-size:16px;
+    }
+
+    .contact-buttons{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .contact-buttons a{
+      text-decoration:none;
+
+      padding:16px 28px;
+
+      border-radius:16px;
+
+      background:white;
+
+      color:#3b3027;
+
+      border:1px solid #e8ddd0;
+
+      display:flex;
+      align-items:center;
+      gap:12px;
+
+      transition:0.3s;
+
+      box-shadow:0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    .contact-buttons a:hover{
+      transform:translateY(-5px);
+      background:#b89b7a;
+      color:white;
+    }
+
+    .contact-buttons i{
+      font-size:22px;
     }
 
     footer{
@@ -336,12 +444,18 @@
     footer p{
       color:#7b6c5e;
       font-size:15px;
+      margin-bottom:10px;
     }
 
     @media(max-width:900px){
 
       header{
-        padding:20px;
+        padding:18px 20px;
+      }
+
+      .logo{
+        font-size:24px;
+        letter-spacing:3px;
       }
 
       nav{
@@ -349,28 +463,60 @@
       }
 
       .hero{
-        min-height:80vh;
-        padding-top:120px;
+        min-height:75vh;
+        padding:120px 20px 60px;
       }
 
       .hero h1{
-        font-size:46px;
+        font-size:44px;
       }
 
       .hero p{
-        font-size:16px;
+        font-size:15px;
+      }
+
+      .hero button{
+        width:100%;
+        max-width:260px;
       }
 
       .section-title h2{
-        font-size:40px;
-      }
-
-      .about h2{
-        font-size:42px;
+        font-size:38px;
       }
 
       .products{
-        padding:0 20px 80px;
+        grid-template-columns:1fr;
+        padding:0 20px 70px;
+      }
+
+      .card img{
+        height:280px;
+      }
+
+      .features{
+        grid-template-columns:1fr;
+        padding:70px 20px;
+      }
+
+      .about{
+        padding:80px 20px;
+      }
+
+      .about h2{
+        font-size:40px;
+      }
+
+      .contact h2{
+        font-size:40px;
+      }
+
+      .contact-buttons{
+        flex-direction:column;
+      }
+
+      .contact-buttons a{
+        width:100%;
+        justify-content:center;
       }
 
     }
@@ -388,11 +534,10 @@
     </div>
 
     <nav>
-      <a href="">Ana Sayfa</a>
-      <a href="">Takılar</a>
-      <a href="">Koleksiyon</a>
-      <a href="">Hakkımızda</a>
-      <a href="">İletişim</a>
+      <a href="#">Ana Sayfa</a>
+      <a href="#products">Koleksiyonlar</a>
+      <a href="#about">Hakkımızda</a>
+      <a href="#contact">İletişim</a>
     </nav>
 
   </header>
@@ -409,13 +554,25 @@
       Minimal detaylar, premium dokular ve modern kadınlara özel tasarlanmış şık takılar.
     </p>
 
-    <button>
-      Koleksiyonu İncele
-    </button>
+    <div class="hero-buttons">
+
+      <a href="#products">
+        <button>
+          Koleksiyonlar
+        </button>
+      </a>
+
+      <a href="#contact">
+        <button class="outline-btn">
+          İletişime Geç
+        </button>
+      </a>
+
+    </div>
 
   </section>
 
-  <div class="section-title">
+  <div class="section-title" id="products">
 
     <h2>
       Öne Çıkan Takılar
@@ -513,52 +670,110 @@
 
     <div class="feature-box">
 
+      <i class="fa-solid fa-gem"></i>
+
       <h3>
         Premium Kalite
       </h3>
 
       <p>
-        Uzun ömürlü ve dayanıklı çelik materyaller ile üretilmiş özel takılar.
+        Dayanıklı ve uzun ömürlü materyaller ile hazırlanan özel koleksiyonlar.
       </p>
 
     </div>
 
     <div class="feature-box">
 
+      <i class="fa-solid fa-truck-fast"></i>
+
       <h3>
-        Modern Tasarım
+        Hızlı Kargo
       </h3>
 
       <p>
-        Minimal çizgiler ve elit görünüm ile modern stil anlayışına uygun koleksiyon.
+        Siparişleriniz özenli paketleme ile hızlı şekilde adresinize ulaştırılır.
       </p>
 
     </div>
 
     <div class="feature-box">
 
+      <i class="fa-solid fa-shield-heart"></i>
+
       <h3>
-        Şık Paketleme
+        Güvenli Alışveriş
       </h3>
 
       <p>
-        Premium kutu ve zarif paketleme ile özel hissettiren teslimat deneyimi.
+        Müşteri memnuniyetini ön planda tutan güvenilir alışveriş deneyimi.
       </p>
 
     </div>
 
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
 
     <h2>
       Ravello Hakkında
     </h2>
 
     <p>
-      Ravello, modern kadınların günlük stiline zarif dokunuşlar katmak için oluşturulmuş premium bir takı markasıdır.
-      Minimal ve elit tasarım anlayışıyla hazırlanan koleksiyonlarımız, şıklığı sade detaylarla birleştirir.
+      Ravello, modern kadınların günlük stiline zarif dokunuşlar katmak amacıyla kurulmuş premium bir takı markasıdır.
+      Minimal çizgiler ve şık detaylar ile hazırlanan koleksiyonlarımız; kalite, güven ve modern görünümü bir araya getirir.
+      Müşteri memnuniyeti önceliğimizdir ve tüm ürünlerimiz özenle seçilerek sizlere sunulur.
     </p>
+
+    <div class="stats">
+
+      <div class="stat-box">
+        <h3>500+</h3>
+        <p>Mutlu Müşteri</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>%100</h3>
+        <p>Güvenli Ödeme</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>7/24</h3>
+        <p>Müşteri Desteği</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact" id="contact">
+
+    <h2>
+      İletişim
+    </h2>
+
+    <p>
+      Sorularınız ve siparişleriniz için bizimle iletişime geçebilirsiniz.
+    </p>
+
+    <div class="contact-buttons">
+
+      <a href="mailto:Halilbsks@gmail.com">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        Halilbsks@gmail.com
+
+      </a>
+
+      <a href="https://wa.me/905393557840" target="_blank">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        0539 355 78 40
+
+      </a>
+
+    </div>
 
   </section>
 
@@ -567,6 +782,10 @@
     <h3>
       RAVELLO
     </h3>
+
+    <p>
+      Premium Takı Koleksiyonu
+    </p>
 
     <p>
       © 2026 Ravello — Tüm Hakları Saklıdır.
